@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evergreen Northeast Pvt.Ltd Company Official Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.4/dist/sweetalert2.min.js"></script>
+     <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
+</head>
+<body>
+<div id="backgroundImage1" class="background-layer"></div>
+<div id="backgroundImage2" class="background-layer"></div>
+<div class="bg-light py-2 border-bottom" id="top-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-9 d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                <span id="topPhone" class="mb-1 mb-md-0 me-md-3"><i class="fas fa-phone-alt text-primary"></i> Telephone : 91+ 95772-46691<?= topPhone ?></span>
+                <span id="topEmail" class="mb-1 mb-md-0 me-md-3"><i class="fas fa-envelope text-primary"></i> Email : evergreen.n.pvt.ltd@gmail.com <?= topEmail ?></span>
+                <span id="topWork"><i class="fas fa-clock text-primary"></i> FY : 2026 <?= topWork ?></span>
+            </div>
+            <div class="col-12 col-md-3 d-flex flex-column flex-md-row align-items-start align-items-md-center mt-2 mt-md-0 justify-content-md-end">
+                <div class="d-flex">
+                    <a href="<?= facebookLink ?>" target="_blank" class="text-primary me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="<?= twitterLink ?>" target="_blank" class="text-info me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="<?= instagramLink ?>" target="_blank" class="text-danger me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="<?= youtubeLink ?>" target="_blank" class="text-danger"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg custom-navbar" id="navbar">
+    <div class="container position-relative">
+        <div class="d-flex flex-grow-1">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('beranda')">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+               
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profilDropdown">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a class="dropdown-item" href="https://script.google.com/macros/s/AKfycbz3_Tn-GRTZZN0EAfNSpaTfHw7JLVwJmkUFlCKLDPCQ5XUXOiH5sdqhZsy1zkyK5ZJs/exec"><i class="fas fa-id-card"></i> Id Card Download</a></li>
+                       
+                    </ul>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="informationDropdown">
+                        <i class="fas fa-certificate"></i> Certificates
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> Get Distributor Certificate</a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> Get Dealership Certificate</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="informationDropdown">
+                        <i class="fas fa-book"></i> Applications
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> Re-Checking exam result</a></li>
+                       
+                    </ul>
+                 
+        </div>
+
+       <a class="navbar-brand logo-center" href="#" onclick="showPage('beranda')">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/HDTWf8jJ/Logo-Enplc.png" alt="Logo Sekolah">
+            </div>
+        </a>
+
+        <div class="d-flex flex-grow-1 justify-content-end">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown">
+                        <i class="fas fa-photo-video"></i> Media
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="showPage('gallery')"><i class="fas fa-images"></i> Gallery</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="linkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-link"></i> Link
+                  </a>
+                  <ul class="dropdown-menu" id="linkDropdownMenu">
+                       <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> Contact to Office Assistant </a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-user-tie"></i> Contact to H.R </a></li>
+                         <li><a class="dropdown-item" href="#" ><i class="fas fa-user-graduate"></i> Contact to C.E.O </a></li>
+                  </ul>
+                </li>
+                 <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="linkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-envelope"></i> Notice
+                  </a>
+                  <ul class="dropdown-menu" id="linkDropdownMenu">
+                       <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> New Job vacancy notice 25/06/2026 </a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> Distributor exam result declared 30/06/2026 </a/>//li>
+                       
+                  </ul>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="linkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-sign-in"></i> Login
+                  </a>
+                  
+                   <ul class="dropdown-menu">
+                        
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-chalkboard-teacher"></i> Exam Trainer login</a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-store"></i> Distributors login</a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-sitemap"></i> Dealers login</a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-star"></i> Security Gurds login</a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-hand"></i> Labours & Workers login</a></li>
+                        
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-sitemap"></i> Supervisors login</a></li>
+                       
+                         <li><a class="dropdown-item" href="#" ><i class="fas fa-user-cog"></i> Machine Operators login</a></li>
+                          <li><a class="dropdown-item" href="#" ><i class="fas fa-book"></i> Office Assistant login</a></li>
+                        <li><a class="dropdown-item" href="#" ><i class="fas fa-user-tie"></i> H.R login</a></li>
+                         <li><a class="dropdown-item" href="#" ><i class="fas fa-user-graduate"></i> C.E.O login</a></li>
+                    </ul>
+
+
+
+
+
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="logoutMenuItem" onclick="logoutHandler()" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+              <li class="nav-item position-relative">
+                <a class="nav-link" href="#" onclick="toggleSearchForm()">
+                    <i class="fas fa-search" id="searchIcon"></i>
+                    <i class="fas fa-times" id="closeIcon" style="display: none;"></i> 
+                </a>
+                <div id="searchFormItem">
+                    <input type="text" class="form-control" placeholder="Search + Enter..." id="navbarSearch" onkeypress="handleEnter(event)" />
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<div class="width-100 margin-top-25">
+<div class="container">
+<div class="width-25%"><img src="images/logos.png" class="logo-img"></div>
+</div>
+</div>
+</div>
+
+
+
+<div id="course" class="transparent py-5">
+  <div class="container">
+    <div id="courseContent">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="info_1 text-center">
+            <a href="#" onclick="showPage('news')" class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">AEPAP</h5></a>
+              <p class="card-text">About Evergreen Northeast Pvt.Ltd Company Profiles , Partners,Shares and manufacturing products click the blue arow to know more details. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <a href="#" onclick="showPage('admisi')" class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">ONRR</h5></a>
+              <p class="card-text">Official notifications , Rules & Regulations.click the blue arow to know.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <a href="#" onclick="showPage('event')" class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">Event</h5></a>
+              <p class="card-text">Click the blue arow to know all event dates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="pengumuman" class="text-dark py-5" style="display: none; background-color:#dbf0ff">
+   <div class="container">
+    <h2 class="text-center mb-4"><i class="fas fa-bullhorn"></i> Pengumuman</h2>
+    <div id="pengumumanContent"></div>
+  </div>
+</div>
+
+<div id="tentang" class="bg-white text-dark py-5">
+   <div class="container">
+    <div id="tentangContent"></div>
+  </div>
+</div>
+
+<div id="myData" class="transparent py-5">
+  <div class="container">
+    <div id="courseContent">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="info_1 text-center">
+            <a class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">Distributors</h5></a>
+              <h2 class="card-text" id="guru">35</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <a class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-users"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">Dealership</h5></a>
+              <h2 class="card-text" id="staf">3500</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <a class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-graduation-cap"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">Stafs</h5></a>
+              <h2 class="card-text" id="siswa">4001</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <a class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-star"></i>
+            </a>
+            <div class="info">
+              <a style="text-decoration:none;color:#fff"><h5 class="title">Partners</h5></a>
+              <h2 class="card-text" id="prestasi">1</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myLink" class="bg-white py-5">
+  <div class="container">
+    <div id="courseContent">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="info_1 text-center">
+            <a href="https://belajar.kemdikbud.go.id" target="=_blank" class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-link"></i>
+            </a>
+            <div class="info">
+              <a href="https://belajar.kemdikbud.go.id" target="=_blank" style="text-decoration:none;color:#333"><h5 class="title">Aristotle</h5></a>
+              <p class="card-text">"Quality is not an act, it is a habit."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <a href="https://budi.kemdikbud.go.id" target="=_blank" class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-link"></i>
+            </a>
+            <div class="info">
+              <a href="https://budi.kemdikbud.go.id" target="=_blank" style="text-decoration:none;color:#333"><h5 class="title">Henry Ford</h5></a>
+              <p class="card-text">"Quality means doing it right when no one is looking."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <a href="https://rumah.pendidikan.go.id" target="=_blank" class="arrow-circle" style="text-decoration:none">
+              <i class="fas fa-link"></i>
+            </a>
+            <div class="info">
+              <a href="https://rumah.pendidikan.go.id" target="=_blank" style="text-decoration:none;color:#333"><h5 class="title">Warren Buffett</h5></a>
+              <p class="card-text">"Do not compromise on the quality and your customers will not negotiate on the price."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-left text-md-start">
+                <h5 class="mb-4" id="navTitle" onclick="showPage('beranda')"><img src="https://i.ibb.co/HDTWf8jJ/Logo-Enplc.png" alt="Logo Sekolah" class="me-2" style="height: 40px; border-radius:50%"><?= navTitle ?></h5>
+                <p id="footerDescription">EVERGREEN NORTHEAST PVT.LTD COMPANY<?= footerDescription ?></p>
+            </div>
+            <div class="col-md-4 text-left">
+                <h5 class="mb-4">Address</h5>
+                <p id="footerAddress"><i class="fas fa-map-marker-alt"></i> Ghograpar,Kayakuchi,Nalbari,Assam,India - 781369 <?= footerAddress ?></p>
+                <p id="footerEmail"><i class="fas fa-envelope"></i> evergreen.n.pvt.ltd@gmail.com </i> <?= footerEmail ?></p>
+                <p id="footerPhone"><i class="fas fa-phone"></i> 91+ 95772-46691 <?= footerPhone ?></p>
+                <a href="#" class="btn btn-primary btn-sm mt-2" onclick="showPage('')">Note</a>
+            </div>
+            <div class="col-md-4 text-left">
+                <h5 class="mb-4">Social Media </h5>
+                <a href="<?= facebookLink ?>" target="_blank" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                <a href="<?= twitterLink ?>" target="_blank" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="<?= instagramLink ?>" target="_blank" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                <a href="<?= youtubeLink ?>" target="_blank" class="text-white"><i class="fab fa-youtube"></i></a>
+
+                <h5 class="mt-3">Subscribe</h5>
+                <p>Please Subscribe our channel on youtube.</p>
+                <form id="subscribeForm" class="d-flex justify-content-left" onsubmit="subscribeUser(event)">
+                  <input type="email" id="subscribeEmail" class="form-control form-control-sm me-2" placeholder="" required>
+                  <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-left mt-3">
+            <p class="mb-0">&copy; 2026 P.F Groups. All Rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="#" id="backToTop" class="btn btn-secondary" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 999;">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+
+<style>
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6c63ff, #3f51b5);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #5a54e1, #323dab);
+}
+::-webkit-scrollbar-track {
+    background: #05182b;
+    border-radius: 5px; 
+}
+::-webkit-scrollbar-track:hover {
+    background: #e0e0e0;
+}
+::-webkit-scrollbar-corner {
+    background: #05182b;
+}
+#loadingIcon {
+  position: fixed;
+  color:blue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+}
+body, #backgroundImage1, #backgroundImage2 {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Apercu', sans-serif;
+  background-color:#fff;
+}
+@keyframes zoomInBackground {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1.5s ease-in-out;
+    animation: zoomInBackground 20s linear infinite alternate;
+    z-index: -1;
+}
+
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.background-layer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+#navbar.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 9999; 
+}
+.navbar {
+  position: relative;
+  display: block;
+}
+.nav-item {
+  margin-right: 10px; 
+}
+#mobile {
+    display: none;
+}
+#uploadForm {
+    display: none;
+}
+.logo-center {
+  background-color: #004080;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 50%; 
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); 
+  width: 100px; 
+   overflow: hidden;
+}
+.logo-container {
+   position: relative;
+}
+.arrow-circle.disabled {
+  pointer-events: none; 
+  opacity: 0.5; 
+  cursor: not-allowed;
+}
+
+.logo-container img {
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); 
+}
+.main {
+    margin-top: 7%; 
+    padding: 20px;
+    margin-bottom: 7%;
+}
+#fasilitasModal {
+    transform: translateY(-10%);
+    transition: transform 0.3s ease-out; 
+}
+
+#fasilitasModal.show {
+    transform: translateY(10%); 
+}
+.custom-navbar {
+    background-color: #004080;
+}
+.custom-navbar .navbar-brand span {
+    color: white;
+    font-weight: bold;
+}
+.custom-navbar .nav-link {
+    color: white !important;
+    transition: 0.3s;
+}
+.custom-navbar .nav-link:hover {
+    color: #ffcc00 !important;
+}
+.custom-navbar .dropdown-menu {
+    background-color: #004080;
+}
+.custom-navbar .dropdown-item {
+    color:#fff;
+}
+.custom-navbar .dropdown-item:hover {
+    background-color: #ffcc00;
+    color: #004080;
+}
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out; 
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;  /* Fully visible when hovered */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.navbar-nav .nav-item.dropdown .nav-link {
+    transition: color 0.3s ease-in-out;
+}
+.news-item {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.news-container {
+    display: flex;
+    gap: 20px;
+}
+
+.main-news {
+    width: 70%;
+}
+
+.sidebar-news {
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.sidebar-news-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-news-item:hover {
+    background-color: #50b5dd; 
+    color: #333;
+}
+.sidebar-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.sidebar-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.news-image {
+    max-width: 50%;
+    margin-top:10px;
+    margin-bottom:10px;
+    height: 340px;
+    float: left;
+    margin-right: 15px; 
+}
+.news-content {
+    text-align: justify; 
+}
+
+.sidebar-news .category{
+  margin-top: 20px !important; 
+}
+
+.sidebar-category-item {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-category {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar-category-item:hover .sidebar-category {
+    color: #007bff;
+}
+
+.image-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.image-overlay img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 15px;
+}
+
+.news-responsive-image {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+}
+
+.card-img-container {
+    width: 100%;
+    height: 150px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    text-align: center;
+    color:#fff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transparent:hover {
+    transform: scale(1.0);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); 
+}
+
+.arrow-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin: 0 auto 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-circle:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.info {
+    padding: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.guru-staff-card p {
+    line-height: 1.4;
+    margin-bottom: 5px; 
+    font-size: 15px;
+}
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1); 
+}
+.img-gallery {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.modal-lg .modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#modalGambar {
+    width: 100%;
+    height: auto;
+    object-fit:cover;
+}
+#top-info{
+  display:block;
+}
+.gambar-kurikulum, .gambar-jadwal, .gambar-akreditasi {
+  width: 80%; 
+  height: 80%; 
+  object-fit: cover;
+  max-height: 100vh; 
+  border-radius: 10px;
+}
+.teks-kurikulum, .teks-jadwal {
+  text-align:center;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+ .pdf-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+ .pdf-link:hover {
+   background-color: #45a049;
+}
+#searchFormItem {
+    position: absolute;
+    right: 10px;
+    top: 100%;
+    display: none;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 250px;
+}
+#filterTahun {
+    min-width: 150px;
+}
+@media (max-width: 991px) {
+  .navbar-collapse::-webkit-scrollbar {
+    display: none; 
+  }
+  #navbarNav {
+    display: none; 
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    }
+
+  .navbar-nav {
+    flex-direction: row;
+    display: flex;
+    }
+  .nav-item {
+    flex: 0 0 auto;
+    padding: 0 10px;
+  }
+  .navbar-nav::after {
+    content: "";
+    display: block;
+    width: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display:none;
+   }
+   #top-info{
+     display:none;
+   }
+   #navbar.sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 9999; 
+    }
+    #navbar {
+      display: none; 
+    }
+
+    #mobile {
+      display: block; 
+    }
+    .main {
+      margin-top: 5%; 
+      margin-bottom: 3%;
+    }
+    .navbar-brand span{
+      font-size:17px;
+    }
+    #top-info span{
+      font-size: 14px;
+    }
+    .arrow-circle {
+     margin-top:20px;
+    }
+    .info_1 {
+     margin-top:-10px;
+    }
+    .col-md-4 {
+        margin-bottom: 30px;
+    }
+    .news-container {
+      flex-direction: column;
+    }
+    .main-news, .sidebar-news {
+        width: 100%;
+    }
+    .news-item {
+        flex-direction: column; 
+    }
+    .news-image {
+     width: 100%;
+     height: auto;
+     max-width: 100%;
+     max-height: none; 
+     object-fit: contain; 
+   }
+    .sidebar-news h5 {
+        margin-top: -30px !important; 
+    }
+    .sidebar-news .category{
+        margin-top: 30px !important; 
+    }
+    .card {
+        width: 100%;
+    }
+    .news-responsive-image {
+        width: 100%;
+    }
+     .img-gallery {
+        height: 200px; 
+    }
+    .gambar-kurikulum, .gambar-jadwal, .gambar-akreditasi {
+     width: 100%; 
+     height: 350px; 
+     object-fit: cover;
+     max-height: 100vh; 
+     border-radius: 5px;
+   }
+   .admisi{
+    margin-top:-10px;
+   }
+ }
+</style>
